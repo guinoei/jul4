@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="logo-icon.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+    <title>GUINOBELIUM</title>
+</head>
+<body>
+    <style>
+        * {
+            cursor: grabbing;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            gap: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #800080;
+            background-image: url(Untitled-2.png);
+            background-position: bottom;
+            background-size: cover;
+            background-blend-mode: luminosity;
+        }
+
+        .content {
+            width: 920px;
+            height: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            background: #201320;
+        }
+
+        p {
+            text-shadow: 1px 2px 4px #f7fff0;
+            color: #800080;
+            text-align: center;
+            font-size: 80px;
+            background: transparent;
+        }
+
+        footer {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+        }
+
+        .logo {
+            width: 208px;
+            height: 80px;
+            background-image: url(logo.png);
+        }
+
+        a {
+            width: 208px;
+            height: 80px;
+            display: flex;
+            border: none;
+            text-decoration: none;
+        }
+
+    </style>
+    </head>
+    <body>
+        <div class="content">
+            <p id="date"></p>
+        </div>
+
+        <footer>
+            <div class="logo">
+                <a href="https://guinoei.github.io/fev22"></a>
+            </div>
+        </footer>
+        <script>
+            // date
+            {
+                var countDownDate = new Date("Jul 4, 2022 12:00:00").getTime();
+
+                // every 1 second
+                var x = setInterval(function () {
+
+                    // today's date
+                    var now = new Date().getTime();
+
+                    // distance between
+                    var distance = countDownDate - now;
+
+                    // calculations for days, hours, minutes and seconds
+                    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                    // Output
+                    document.getElementById("date").innerHTML = days + "d " + hours + "h "
+                        + minutes + "m " + seconds + "s ";
+                })
+            };
+        </script>
+    </body>
+</html>
+</body>
+</html>
