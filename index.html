@@ -29,9 +29,8 @@
             justify-content: center;
             align-items: center;
             background-color: #800080;
-            background-image: url(Untitled-2.png);
-            background-position: bottom;
-            background-size: cover;
+            background-image: url(Untitled-2.png);           
+            background-size: cover;           
             background-blend-mode: luminosity;
         }
 
@@ -73,6 +72,19 @@
             text-decoration: none;
         }
 
+        @media only screen and (max-width:768px){
+            p{
+                font-size: 28px;
+                text-shadow: 1px 1px 2px #f7fff0;
+            }
+
+            .content{
+                width: 310px;
+                height: 50px;
+                border-radius: 10px;
+            }
+        }
+
     </style>
     </head>
     <body>
@@ -97,7 +109,7 @@
                     var now = new Date().getTime();
 
                     // distance between
-                    var distance = countDownDate - now;
+                    var distance = now - countDownDate;
 
                     // calculations for days, hours, minutes and seconds
                     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
